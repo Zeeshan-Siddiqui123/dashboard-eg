@@ -1,12 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import SiteHeader from "../components/SiteHeader";
-import { useGetUsersQuery } from "../features/api/authApi"; 
+import { useGetUsersQuery } from "../features/api/authApi";
 import { useGetPostsQuery } from "../features/api/postApi";
 import Loader from "../components/Loader";
 import { PiHandWavingFill } from "react-icons/pi";
 import { Users, FileText } from "lucide-react";
-import Card from "../components/Card"; 
+import Card from "../components/Card";
+import DashboardCharts from "../components/DashboardCharts";
 
 const Dashboard = () => {
   const { user } = useSelector((state) => state.auth);
@@ -37,6 +38,13 @@ const Dashboard = () => {
             icon={<FileText color="orange" size={20} />}
           />
         </div>
+        <div className="mt-8">
+          <DashboardCharts
+            usersCount={users?.length || 0}
+            postsCount={posts?.length || 0}
+          />
+        </div>
+
       </div>
     </div>
   );

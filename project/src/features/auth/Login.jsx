@@ -33,7 +33,7 @@ const Login = () => {
 
     if (user) {
       setLoading(true);
-      setErrors(""); // Clear previous errors
+      setErrors(""); 
       dispatch(setCredentials(user));
       setTimeout(() => navigate("/dashboard"), 2000);
     } else {

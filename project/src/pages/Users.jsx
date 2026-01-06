@@ -21,7 +21,6 @@ const Users = () => {
 
   return (
     <div className="flex min-h-screen">
-      {/* <SiteHeader / */}
       <div className="flex-1 p-6 bg-gray-100">
         <h1 className="text-2xl font-bold mb-6">Users</h1>
         <div className="overflow-x-auto rounded-lg shadow-md bg-white">
